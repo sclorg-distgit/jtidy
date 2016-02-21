@@ -6,7 +6,7 @@
 
 Name:             %{?scl_prefix}%{pkg_name}
 Version:          1.0
-Release:          0.16.20100930svn1125.13%{?dist}
+Release:          0.16.20100930svn1125.14%{?dist}
 Epoch:            2
 Summary:          HTML syntax checker and pretty printer
 License:          zlib
@@ -41,13 +41,13 @@ This package contains %{summary}.
 %setup -q -n %{pkg_name}
 
 %build
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 ant -Dant.build.javac.source=1.4
 %{?scl:EOF}
 
 %install
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 # jar
 install -d -m 755 %{buildroot}%{_javadir}
@@ -83,6 +83,9 @@ echo "jtidy" > %{buildroot}%{_sysconfdir_java_common}/ant.d/%{pkg_name}
 
 
 %changelog
+* Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 2:1.0-0.16.20100930svn1125.14
+- maven33 rebuild #2
+
 * Sat Jan 09 2016 Michal Srb <msrb@redhat.com> - 2:1.0-0.16.20100930svn1125.13
 - maven33 rebuild
 
