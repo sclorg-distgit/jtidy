@@ -6,7 +6,7 @@
 
 Name:             %{?scl_prefix}%{pkg_name}
 Version:          1.0
-Release:          0.16.20100930svn1125.14%{?dist}
+Release:          0.16.20100930svn1125.15%{?dist}
 Epoch:            2
 Summary:          HTML syntax checker and pretty printer
 License:          zlib
@@ -83,6 +83,9 @@ echo "jtidy" > %{buildroot}%{_sysconfdir_java_common}/ant.d/%{pkg_name}
 
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 2:1.0-0.16.20100930svn1125.15
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 2:1.0-0.16.20100930svn1125.14
 - maven33 rebuild #2
 
