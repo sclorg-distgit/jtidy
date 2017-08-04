@@ -3,7 +3,7 @@
 
 Name:             %{?scl_prefix}jtidy
 Version:          1.0
-Release:          0.24.20100930svn1125.1%{?dist}
+Release:          0.24.20100930svn1125.2%{?dist}
 Epoch:            2
 Summary:          HTML syntax checker and pretty printer
 License:          zlib
@@ -64,6 +64,9 @@ EOF
 %license LICENSE.txt
 
 %changelog
+* Thu Jun 22 2017 Michael Simacek <msimacek@redhat.com> - 2:1.0-0.24.20100930svn1125.2
+- Mass rebuild 2017-06-22
+
 * Wed Jun 21 2017 Java Maintainers <java-maint@redhat.com> - 2:1.0-0.24.20100930svn1125.1
 - Automated package import and SCL-ization
 
